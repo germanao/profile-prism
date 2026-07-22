@@ -1,0 +1,14 @@
+{
+  "extensionName": {
+    "message": "Profile Prism"
+  },
+  "extensionShortName": {
+    "message": "Profile Prism"
+  },
+  "extensionDescription": {
+    "message": "¿Qué tan auténtico es este perfil de LinkedIn? Puntúa evidencia en el dispositivo; no verifica identidad ni determina fraude."
+  },
+  "actionTitle": {
+    "message": "Abrir Profile Prism"
+  }
+}

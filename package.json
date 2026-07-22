@@ -1,0 +1,36 @@
+{
+  "name": "profile-prism-extension",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "description": "Profile Prism scores visible LinkedIn profile authenticity evidence on-device.",
+  "author": "germanao",
+  "scripts": {
+    "clean": "node build/build.mjs --clean",
+    "build": "node build/build.mjs",
+    "package": "node build/package.mjs",
+    "verify:package": "node scripts/verify-reproducible-package.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "npm run build && playwright test",
+    "verify:privacy": "node scripts/verify-privacy.mjs",
+    "firefox:lint": "addons-linter --warnings-as-errors dist/firefox",
+    "check": "npm run typecheck && npm test && npm run build && npm run verify:privacy && npm run firefox:lint && npm run verify:package"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/archiver": "^8.0.0",
+    "@types/chrome": "^0.2.2",
+    "@types/node": "^26.1.1",
+    "addons-linter": "^10.9.0",
+    "archiver": "^8.0.0",
+    "esbuild": "^0.28.1",
+    "jsdom": "^29.1.1",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
+  }
+}

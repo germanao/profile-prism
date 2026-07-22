@@ -1,0 +1,18 @@
+{
+  "extensionName": {
+    "message": "Profile Prism",
+    "description": "Public extension name"
+  },
+  "extensionShortName": {
+    "message": "Profile Prism",
+    "description": "Short extension name"
+  },
+  "extensionDescription": {
+    "message": "How authentic is this LinkedIn profile? Scores visible authenticity evidence on-device—not identity verification or fraud detection.",
+    "description": "Store and manifest description"
+  },
+  "actionTitle": {
+    "message": "Open Profile Prism",
+    "description": "Toolbar action title"
+  }
+}

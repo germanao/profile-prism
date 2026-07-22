@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": false,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noEmit": true,
+    "types": ["chrome", "node", "vitest/globals"]
+  },
+  "include": [
+    "src/**/*.ts",
+    "tests/**/*.ts",
+    "build/**/*.mjs",
+    "scripts/**/*.mjs",
+    "vitest.config.ts",
+    "playwright.config.ts"
+  ]
+}

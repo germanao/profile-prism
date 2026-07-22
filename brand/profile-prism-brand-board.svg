@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 960" role="img" aria-labelledby="title desc">
+  <title id="title">Profile Prism visual identity board</title>
+  <desc id="desc">Logo, meaning, color palette, typography, and product identity examples for Profile Prism.</desc>
+  <rect width="1440" height="960" fill="#F5F5FB"/>
+  <circle cx="120" cy="20" r="280" fill="#E7E8FF"/>
+  <circle cx="1380" cy="900" r="310" fill="#E4FBF7"/>
+
+  <g transform="translate(96 88)">
+    <rect width="152" height="152" rx="34" fill="#171A3A"/>
+    <g transform="scale(1.1875)">
+      <path d="M37 31 56 21h23c13 0 24 5 31 15l3 8-43 18-33-17Z" fill="#7C83FF"/>
+      <path d="m37 31 19 13v48l-19 13Z" fill="#6569E8"/>
+      <path d="m56 44 14 18v27L56 98Z" fill="#5558C9"/>
+      <path d="m18 73 48-18 7 7-55 18Z" fill="#F8FAFF"/>
+      <path d="m70 58 40-15v7L70 63Z" fill="#9CA3FF"/>
+      <path d="m70 64 40-3v7l-40 1Z" fill="#46D7C4"/>
+      <path d="m70 70 40 10v7L70 75Z" fill="#FFB84D"/>
+    </g>
+    <text x="190" y="72" fill="#171A33" font-family="Inter, Arial, sans-serif" font-size="66" font-weight="750" letter-spacing="-2.5">Profile Prism</text>
+    <text x="194" y="116" fill="#626A80" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="450">Reveal the signals behind the profile.</text>
+  </g>
+
+  <g transform="translate(96 306)">
+    <text fill="#171A33" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2.2">BRAND IDEA</text>
+    <text y="54" fill="#171A33" font-family="Inter, Arial, sans-serif" font-size="35" font-weight="700" letter-spacing="-1">One profile. Multiple visible signals.</text>
+    <text y="94" fill="#626A80" font-family="Inter, Arial, sans-serif" font-size="21">The abstract P becomes a prism: information enters, evidence becomes explainable.</text>
+  </g>
+
+  <g transform="translate(96 455)">
+    <text fill="#171A33" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2.2">COLOR SYSTEM</text>
+    <g transform="translate(0 34)">
+      <rect width="170" height="118" rx="20" fill="#171A3A"/>
+      <text x="18" y="75" fill="#F8FAFF" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="650">Midnight</text>
+      <text x="18" y="98" fill="#BFC3D9" font-family="IBM Plex Mono, monospace" font-size="14">#171A3A</text>
+    </g>
+    <g transform="translate(186 34)">
+      <rect width="170" height="118" rx="20" fill="#7C83FF"/>
+      <text x="18" y="75" fill="#171A3A" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="650">Prism Iris</text>
+      <text x="18" y="98" fill="#272B65" font-family="IBM Plex Mono, monospace" font-size="14">#7C83FF</text>
+    </g>
+    <g transform="translate(372 34)">
+      <rect width="170" height="118" rx="20" fill="#46D7C4"/>
+      <text x="18" y="75" fill="#0C3D38" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="650">Signal Aqua</text>
+      <text x="18" y="98" fill="#15534C" font-family="IBM Plex Mono, monospace" font-size="14">#46D7C4</text>
+    </g>
+    <g transform="translate(558 34)">
+      <rect width="170" height="118" rx="20" fill="#FFB84D"/>
+      <text x="18" y="75" fill="#493111" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="650">Signal Amber</text>
+      <text x="18" y="98" fill="#5B3C0C" font-family="IBM Plex Mono, monospace" font-size="14">#FFB84D</text>
+    </g>
+    <g transform="translate(744 34)">
+      <rect width="170" height="118" rx="20" fill="#F8FAFF" stroke="#D9DCEC"/>
+      <text x="18" y="75" fill="#171A33" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="650">Cloud</text>
+      <text x="18" y="98" fill="#626A80" font-family="IBM Plex Mono, monospace" font-size="14">#F8FAFF</text>
+    </g>
+  </g>
+
+  <g transform="translate(96 680)">
+    <text fill="#171A33" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2.2">VOICE</text>
+    <text y="52" fill="#171A33" font-family="Inter, Arial, sans-serif" font-size="29" font-weight="700">Evidence-led. Calm. Clear about uncertainty.</text>
+    <text y="93" fill="#626A80" font-family="Inter, Arial, sans-serif" font-size="20">Say “visible signals” and “evidence coverage.” Never promise “real,” “safe,” or “verified.”</text>
+  </g>
+
+  <g transform="translate(1070 320)">
+    <rect width="274" height="414" rx="34" fill="#FFFFFF" stroke="#DFE1EE"/>
+    <text x="28" y="44" fill="#626A80" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.6">EXTENSION ICON</text>
+    <rect x="45" y="82" width="184" height="184" rx="40" fill="#171A3A"/>
+    <g transform="translate(45 82) scale(1.4375)">
+      <path d="M37 31 56 21h23c13 0 24 5 31 15l3 8-43 18-33-17Z" fill="#7C83FF"/>
+      <path d="m37 31 19 13v48l-19 13Z" fill="#6569E8"/>
+      <path d="m56 44 14 18v27L56 98Z" fill="#5558C9"/>
+      <path d="m18 73 48-18 7 7-55 18Z" fill="#F8FAFF"/>
+      <path d="m70 58 40-15v7L70 63Z" fill="#9CA3FF"/>
+      <path d="m70 64 40-3v7l-40 1Z" fill="#46D7C4"/>
+      <path d="m70 70 40 10v7L70 75Z" fill="#FFB84D"/>
+    </g>
+    <text x="40" y="310" fill="#171A33" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="700">Clear at every size</text>
+    <text x="40" y="342" fill="#626A80" font-family="Inter, Arial, sans-serif" font-size="16">16 · 32 · 48 · 128 px</text>
+    <text x="40" y="380" fill="#626A80" font-family="Inter, Arial, sans-serif" font-size="15">No shield. No checkmark.</text>
+  </g>
+
+  <line x1="96" y1="858" x2="1344" y2="858" stroke="#D9DCEC"/>
+  <text x="96" y="902" fill="#626A80" font-family="Inter, Arial, sans-serif" font-size="17">Profile Prism · Visual identity v1.0</text>
+  <text x="1344" y="902" text-anchor="end" fill="#626A80" font-family="Inter, Arial, sans-serif" font-size="17">Private by design · On-device only</text>
+</svg>

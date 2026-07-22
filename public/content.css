@@ -1,0 +1,16 @@
+/*
+ * A native LinkedIn dialog opened by the user-triggered scan can enter the
+ * browser's top layer, which is above every ordinary extension z-index. Keep
+ * only that transient, extension-marked dialog visually suppressed while it
+ * is parsed and closed. The attribute is removed during inspector cleanup.
+ */
+[data-profile-authenticity-native-inspection="suppressed"] {
+  filter: opacity(0) !important;
+  pointer-events: none !important;
+}
+
+[data-profile-authenticity-native-inspection="suppressed"]::backdrop {
+  background: transparent !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}

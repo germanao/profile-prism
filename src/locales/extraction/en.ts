@@ -1,0 +1,73 @@
+import type { ExtractionDictionary } from "./types";
+
+export const enExtraction: ExtractionDictionary = {
+  locale: "en",
+  sectionLabels: {
+    about: ["about"],
+    experience: ["experience"],
+    education: ["education"],
+    skills: ["skills"],
+    activity: ["activity", "recent activity"],
+    recommendations: ["recommendations"],
+  },
+  emptyStateText: {
+    generic: ["nothing to show", "no information to show"],
+    experience: ["no experience listed", "hasn't added any experience"],
+    education: ["no education listed", "hasn't added any education"],
+    activity: ["no activity yet", "hasn't posted yet"],
+    recommendations: ["no recommendations yet", "hasn't received any recommendations"],
+    about: ["no about information"],
+    skills: ["no skills listed"],
+  },
+  verification: {
+    identity: ["identity verified", "verified identity"],
+    workplace: ["workplace verified", "verified workplace", "work email verified"],
+    education: ["education verified", "verified education"],
+    verified: ["verified", "verification"],
+  },
+  aboutMember: {
+    governmentId: ["government id", "government-issued id", "identity document"],
+    workEmail: ["work email", "workplace email", "company email"],
+    education: ["education verification", "educational institution", "school email"],
+    joinedLinkedIn: ["joined linkedin", "member since"],
+    contactUpdated: ["contact info", "contact information"],
+    photoUpdated: ["profile photo", "profile picture"],
+    updated: ["updated", "last changed"],
+  },
+  date: {
+    months: {
+      jan: 1, january: 1,
+      feb: 2, february: 2,
+      mar: 3, march: 3,
+      apr: 4, april: 4,
+      may: 5,
+      jun: 6, june: 6,
+      jul: 7, july: 7,
+      aug: 8, august: 8,
+      sep: 9, sept: 9, september: 9,
+      oct: 10, october: 10,
+      nov: 11, november: 11,
+      dec: 12, december: 12,
+    },
+    current: ["present", "current"],
+    rangeSeparators: ["to"],
+    relativeDayUnits: ["d", "day", "days"],
+    relativeWeekUnits: ["w", "week", "weeks"],
+    relativeMonthUnits: ["mo", "mos", "month", "months"],
+    relativeYearUnits: ["yr", "yrs", "year", "years"],
+    relativePrefixes: ["ago"],
+  },
+  network: {
+    connections: ["connection", "connections"],
+    followers: ["follower", "followers"],
+  },
+  profile: {
+    memberSince: ["member since", "joined linkedin"],
+    currentRoleSeparators: [" at "],
+    defaultImageText: ["default profile photo", "default avatar", "placeholder profile photo"],
+  },
+  content: {
+    genericPhrases: ["results-driven professional", "passionate professional", "seeking new opportunities"],
+    outcomeTerms: ["increased", "reduced", "improved", "delivered", "built", "launched", "saved"],
+  },
+};

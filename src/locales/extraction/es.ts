@@ -1,0 +1,73 @@
+import type { ExtractionDictionary } from "./types";
+
+export const esExtraction: ExtractionDictionary = {
+  locale: "es",
+  sectionLabels: {
+    about: ["acerca de", "sobre mí"],
+    experience: ["experiencia"],
+    education: ["educación", "formación académica"],
+    skills: ["aptitudes", "habilidades"],
+    activity: ["actividad", "actividad reciente"],
+    recommendations: ["recomendaciones"],
+  },
+  emptyStateText: {
+    generic: ["nada que mostrar", "no hay información para mostrar"],
+    experience: ["no se indicó experiencia", "no ha añadido experiencia"],
+    education: ["no se indicó formación", "no ha añadido formación"],
+    activity: ["todavía no hay actividad", "aún no ha publicado"],
+    recommendations: ["todavía no hay recomendaciones", "aún no ha recibido recomendaciones"],
+    about: ["no hay información en acerca de"],
+    skills: ["no se indicaron aptitudes", "no se indicaron habilidades"],
+  },
+  verification: {
+    identity: ["identidad verificada", "verificación de identidad completada"],
+    workplace: ["lugar de trabajo verificado", "empresa verificada", "correo laboral verificado"],
+    education: ["educación verificada", "formación verificada", "institución educativa verificada"],
+    verified: ["verificado", "verificada", "completado", "completada"],
+  },
+  aboutMember: {
+    governmentId: ["documento de identidad", "identificación oficial", "documento oficial"],
+    workEmail: ["correo laboral", "correo de trabajo", "correo corporativo"],
+    education: ["verificación educativa", "institución educativa", "correo académico"],
+    joinedLinkedIn: ["se unió a linkedin", "miembro desde"],
+    contactUpdated: ["información de contacto", "datos de contacto"],
+    photoUpdated: ["foto de perfil", "imagen de perfil"],
+    updated: ["actualizado", "actualizada", "cambiado", "cambiada"],
+  },
+  date: {
+    months: {
+      ene: 1, enero: 1,
+      feb: 2, febrero: 2,
+      mar: 3, marzo: 3,
+      abr: 4, abril: 4,
+      may: 5, mayo: 5,
+      jun: 6, junio: 6,
+      jul: 7, julio: 7,
+      ago: 8, agosto: 8,
+      sept: 9, sep: 9, septiembre: 9,
+      oct: 10, octubre: 10,
+      nov: 11, noviembre: 11,
+      dic: 12, diciembre: 12,
+    },
+    current: ["actualidad", "presente", "actualmente", "actual"],
+    rangeSeparators: ["hasta", "a"],
+    relativeDayUnits: ["d", "día", "días"],
+    relativeWeekUnits: ["sem", "semana", "semanas"],
+    relativeMonthUnits: ["mes", "meses"],
+    relativeYearUnits: ["a", "año", "años"],
+    relativePrefixes: ["hace"],
+  },
+  network: {
+    connections: ["conexión", "conexiones"],
+    followers: ["seguidor", "seguidores"],
+  },
+  profile: {
+    memberSince: ["miembro desde", "se unió a linkedin"],
+    currentRoleSeparators: [" en "],
+    defaultImageText: ["foto de perfil predeterminada", "avatar predeterminado", "marcador de foto de perfil"],
+  },
+  content: {
+    genericPhrases: ["profesional orientado a resultados", "profesional apasionado", "en busca de nuevas oportunidades"],
+    outcomeTerms: ["aumentó", "redujo", "mejoró", "entregó", "construyó", "lanzó", "ahorró"],
+  },
+};

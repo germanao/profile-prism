@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <style>
+      body { margin: 0; font: 16px/1.5 system-ui, sans-serif; }
+      main { margin: 0 auto; max-width: 860px; padding: 24px; }
+      section { border-bottom: 1px solid #d7dce1; padding: 24px 0; }
+      .name-row { align-items: center; display: flex; gap: 8px; }
+      .spacer { block-size: 1100px; }
+      [role="dialog"] {
+        background: white;
+        border: 1px solid #777;
+        inset: 10% 20%;
+        padding: 24px;
+        position: fixed;
+        z-index: 1000;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section data-pe-top-card>
+        <div class="name-row">
+          <h1 data-pe-field="name">Jordan Incomplete Scan</h1>
+          <button id="native-verification" type="button" aria-label="View Jordan's verifications">
+            Evidence
+          </button>
+          <button type="button" aria-label="View Jordan's verifications">
+            Verification details
+          </button>
+        </div>
+        <p data-pe-field="headline">Software Engineer</p>
+        <span data-pe-field="connections">310 connections</span>
+      </section>
+      <section data-pe-section="about" aria-label="About">
+        <h2>About</h2>
+        <p>Builds reliable web applications for product teams.</p>
+      </section>
+      <div class="spacer" aria-hidden="true"></div>
+    </main>
+    <script>
+      document.querySelector("#native-verification").addEventListener("click", () => {
+        const dialog = document.createElement("div");
+        dialog.setAttribute("role", "dialog");
+        dialog.setAttribute("aria-label", "About this member");
+        dialog.setAttribute("data-complete", "true");
+        dialog.innerHTML = `
+          <h2>About this member</h2>
+          <p>Verification information is temporarily unavailable.</p>
+          <button type="button">Done</button>`;
+        dialog.querySelector("button").addEventListener("click", () => dialog.remove());
+        document.body.append(dialog);
+      });
+    </script>
+  </body>
+</html>

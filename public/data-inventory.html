@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Data inventory — Profile Prism</title>
+    <style>
+      :root { color-scheme: light dark; font-family: system-ui, sans-serif; line-height: 1.55; }
+      body { margin: 2rem auto; max-width: 52rem; padding: 0 1rem; }
+      table { border-collapse: collapse; inline-size: 100%; }
+      th, td { border: 1px solid currentColor; padding: 0.55rem; text-align: start; vertical-align: top; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Field-level data inventory</h1>
+      <p>All profile fields below are read only when already rendered on the current supported page. They are processed ephemerally on-device and are neither retained nor transmitted.</p>
+      <table>
+        <thead><tr><th>Visible field category</th><th>Why it is read</th><th>Stored or sent</th></tr></thead>
+        <tbody>
+          <tr><td>Generic LinkedIn verification badge</td><td>Explains that details may be available; it gives no identity points by itself</td><td>No</td></tr>
+          <tr><td>Structured government-ID, work-email, and education verification methods; account join date; verification date; contact/photo update recency</td><td>Verification, account-tenure, continuity, and small maintenance signals after a user-triggered scan</td><td>No; only categories and elapsed-day values derived from visible dates remain in route-local memory</td></tr>
+          <tr><td>Headline, About, Experience, Education, and Skills sections</td><td>Completeness, specificity, chronology, and cross-section consistency</td><td>No</td></tr>
+          <tr><td>Visible employer links and role details</td><td>Claimed-company affiliation evidence</td><td>No</td></tr>
+          <tr><td>Visible account-age text, when present</td><td>Account maturity evidence</td><td>No</td></tr>
+          <tr><td>Visible activity, interaction, network counts, and recommendations</td><td>Time distribution, reciprocal engagement, network maturity, and social-proof evidence</td><td>No</td></tr>
+          <tr><td>Whether a profile image is present or a default placeholder is rendered</td><td>A narrowly gated thin/new-profile signal; image pixels and biometric traits are never analyzed</td><td>No</td></tr>
+        </tbody>
+      </table>
+      <p>The extension does not read messages, cookies, authentication tokens, contact details, private APIs, hidden profile data, external websites, or facial/biometric attributes. It scrolls the current profile and opens the native “About this member” dialog only after the user presses “Click to verify authenticity.”</p>
+    </main>
+  </body>
+</html>

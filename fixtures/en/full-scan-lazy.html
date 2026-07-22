@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <style>
+      html { scroll-behavior: auto; }
+      body { margin: 0; font: 16px/1.5 system-ui, sans-serif; }
+      main { margin: 0 auto; max-width: 860px; padding: 24px; }
+      section { border-bottom: 1px solid #d7dce1; padding: 24px 0; }
+      .name-row { align-items: center; display: flex; gap: 8px; }
+      .lazy-spacer { block-size: 1300px; }
+      [role="dialog"] { background: white; border: 1px solid #777; inset: 10% 20%; padding: 24px; position: fixed; z-index: 1000; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section data-pe-top-card>
+        <img data-pe-field="profile-image" src="synthetic-avatar.png" alt="Synthetic profile portrait">
+        <div class="name-row">
+          <h1 data-pe-field="name">Jordan Full Scan</h1>
+          <button id="native-verification" type="button" aria-label="View Jordan's verifications">Evidence</button>
+        </div>
+        <p data-pe-field="headline">Senior Platform Engineer at Northstar Labs</p>
+        <a data-pe-field="current-company" href="https://www.linkedin.com/company/northstar-labs/">Northstar Labs</a>
+        <span data-pe-field="connections">500+ connections</span>
+        <span data-pe-field="followers">2,400 followers</span>
+      </section>
+
+      <section data-pe-section="about" aria-label="About">
+        <h2>About</h2>
+        <p>I build TypeScript and Kubernetes platforms and led a reliability project that reduced failed deployments by 31%.</p>
+      </section>
+
+      <div id="lazy-content" aria-live="off"></div>
+      <div id="lazy-spacer" class="lazy-spacer" aria-hidden="true"></div>
+    </main>
+
+    <script>
+      (() => {
+        const verification = document.querySelector("#native-verification");
+        verification.addEventListener("click", () => {
+          const dialog = document.createElement("dialog");
+          dialog.setAttribute("role", "dialog");
+          dialog.setAttribute("aria-label", "About this member");
+          dialog.setAttribute("data-complete", "true");
+          dialog.innerHTML = '<div role="progressbar" aria-label="Loading"></div>';
+          document.body.append(dialog);
+          dialog.showModal();
+          requestAnimationFrame(() => {
+            document.documentElement.dataset.nativeDialogSuppressed =
+              getComputedStyle(dialog).filter.includes("opacity(0)")
+                ? "true"
+                : "false";
+          });
+          setTimeout(() => {
+            dialog.innerHTML = `
+              <h2>About this member</h2>
+              <h3>Account history</h3>
+              <ul>
+                <li>Joined LinkedIn in March 2012</li>
+                <li data-pe-updated-days="20">Contact information updated 20 days ago</li>
+                <li data-pe-updated-days="80">Profile photo updated 80 days ago</li>
+              </ul>
+              <h3>Verifications</h3>
+              <ul>
+                <li data-pe-verification-method="government-id" data-pe-verification-date="August 2025">Government ID verified in August 2025</li>
+                <li data-pe-verification-method="work-email" data-pe-verification-date="January 2025">Work email verified at Northstar Labs in January 2025</li>
+              </ul>
+              <button type="button" id="native-done">Done</button>`;
+            dialog.querySelector("#native-done").addEventListener("click", () => {
+              dialog.close();
+              dialog.remove();
+            });
+          }, 120);
+        });
+
+        const lazyContent = document.querySelector("#lazy-content");
+        const spacer = document.querySelector("#lazy-spacer");
+        let stage = 0;
+        let scheduled = false;
+
+        function nearBottom() {
+          const root = document.scrollingElement;
+          return root.scrollTop + innerHeight >= root.scrollHeight - 340;
+        }
+
+        function loadNextStage() {
+          scheduled = false;
+          if (!nearBottom()) return;
+          if (stage === 0) {
+            stage = 1;
+            lazyContent.insertAdjacentHTML("beforeend", `
+              <section data-pe-section="experience" aria-label="Experience">
+                <h2>Experience</h2>
+                <article data-pe-item data-current="true">
+                  <h3 data-pe-field="title">Senior Platform Engineer</h3>
+                  <a data-pe-field="employer" href="https://www.linkedin.com/company/northstar-labs/">Northstar Labs</a>
+                  <time data-pe-field="dates">January 2022 - Present</time>
+                  <p data-pe-field="description">Led a TypeScript and Kubernetes reliability program and reduced failed deployments by 31% across six teams.</p>
+                </article>
+                <article data-pe-item>
+                  <h3 data-pe-field="title">Platform Engineer</h3>
+                  <a data-pe-field="employer" href="https://www.linkedin.com/company/synthetic-cloud/">Synthetic Cloud</a>
+                  <time data-pe-field="dates">April 2018 - December 2021</time>
+                  <p data-pe-field="description">Built distributed services and delivery automation for cloud products used by three engineering groups.</p>
+                </article>
+                <article data-pe-item>
+                  <h3 data-pe-field="title">Software Engineer</h3>
+                  <a data-pe-field="employer" href="https://www.linkedin.com/company/example-systems/">Example Systems</a>
+                  <time data-pe-field="dates">June 2013 - March 2018</time>
+                  <p data-pe-field="description">Delivered Java and PostgreSQL services and improved release lead time by 22%.</p>
+                </article>
+              </section>
+              <section data-pe-section="education" aria-label="Education"><h2>Education</h2><article data-pe-item><h3>Example University</h3><p>Computer Science</p></article></section>
+              <section data-pe-section="skills" aria-label="Skills"><h2>Skills</h2><ul><li data-pe-item>TypeScript</li><li data-pe-item>Kubernetes</li><li data-pe-item>Distributed systems</li></ul></section>`);
+            spacer.style.blockSize = "1100px";
+            document.documentElement.dataset.lazyStage = "1";
+            return;
+          }
+          if (stage === 1) {
+            stage = 2;
+            lazyContent.insertAdjacentHTML("beforeend", `
+              <section data-pe-section="activity" aria-label="Activity">
+                <h2>Activity</h2>
+                <article data-pe-item><time data-pe-field="date">June 2026</time><p data-pe-field="content">A concrete TypeScript platform migration with measured latency improvements.</p><p data-pe-engagement="reciprocal">This tradeoff helped our team choose a safer rollout.</p></article>
+                <article data-pe-item><time data-pe-field="date">November 2024</time><p data-pe-field="content">Kubernetes reliability lessons from six production teams.</p><p data-pe-engagement="reciprocal">Thanks for documenting the failure mode and recovery path.</p></article>
+                <article data-pe-item><time data-pe-field="date">August 2022</time><p data-pe-field="content">A practical guide to progressive delivery controls.</p><p data-pe-engagement="reciprocal">The measurement detail makes this useful.</p></article>
+              </section>
+              <section data-pe-section="recommendations" aria-label="Recommendations">
+                <h2>Recommendations</h2>
+                <article data-pe-item><cite data-pe-field="author">Synthetic Colleague A</cite><time data-pe-field="date">May 2025</time><blockquote data-pe-field="content">Jordan led our Kubernetes migration and reduced failed deployments by 31% while mentoring two platform teams.</blockquote></article>
+                <article data-pe-item><cite data-pe-field="author">Synthetic Colleague B</cite><time data-pe-field="date">February 2023</time><blockquote data-pe-field="content">Jordan designed a TypeScript delivery service that improved release lead time across three products.</blockquote></article>
+              </section>`);
+            spacer.remove();
+            document.documentElement.dataset.lazyStage = "2";
+          }
+        }
+
+        addEventListener("scroll", () => {
+          if (scheduled || stage >= 2) return;
+          scheduled = true;
+          setTimeout(loadNextStage, 40);
+        }, { passive: true });
+      })();
+    </script>
+  </body>
+</html>

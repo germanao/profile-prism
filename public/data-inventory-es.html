@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inventario de datos — Profile Prism</title>
+    <style>
+      :root { color-scheme: light dark; font-family: system-ui, sans-serif; line-height: 1.55; }
+      body { margin: 2rem auto; max-width: 52rem; padding: 0 1rem; }
+      table { border-collapse: collapse; inline-size: 100%; }
+      th, td { border: 1px solid currentColor; padding: 0.55rem; text-align: start; vertical-align: top; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Inventario de datos por campo</h1>
+      <p>Los campos siguientes solo se leen cuando ya se muestran en la página compatible actual. Se procesan temporalmente en el dispositivo y no se conservan ni se transmiten.</p>
+      <table>
+        <thead><tr><th>Categoría de campo visible</th><th>Motivo de lectura</th><th>Guardado o enviado</th></tr></thead>
+        <tbody>
+          <tr><td>Insignia genérica de verificación de LinkedIn</td><td>Explica que puede haber detalles; por sí sola no otorga puntos de identidad</td><td>No</td></tr>
+          <tr><td>Métodos estructurados de documento oficial, correo laboral y educación; fecha de alta; fecha de verificación; antigüedad de cambios de contacto/foto</td><td>Señales de verificación, antigüedad, continuidad y pequeño mantenimiento tras una acción del usuario</td><td>No; solo categorías y valores de días transcurridos, derivados de las fechas visibles, permanecen en la memoria de la ruta</td></tr>
+          <tr><td>Titular, Acerca de, Experiencia, Educación y Aptitudes</td><td>Integridad, especificidad, cronología y consistencia entre secciones</td><td>No</td></tr>
+          <tr><td>Enlaces visibles de empleadores y detalles de puestos</td><td>Evidencia de afiliación declarada con la empresa</td><td>No</td></tr>
+          <tr><td>Texto visible de antigüedad de la cuenta, cuando aparece</td><td>Evidencia de madurez de la cuenta</td><td>No</td></tr>
+          <tr><td>Actividad, interacciones, cifras de red y recomendaciones visibles</td><td>Distribución temporal, reciprocidad, madurez de la red y evidencia social</td><td>No</td></tr>
+          <tr><td>Presencia de imagen de perfil o marcador predeterminado</td><td>Señal restringida para perfiles nuevos y poco completos; nunca se analizan píxeles ni rasgos biométricos</td><td>No</td></tr>
+        </tbody>
+      </table>
+      <p>La extensión no lee mensajes, cookies, tokens de autenticación, contactos, API privadas, datos ocultos, sitios externos ni atributos faciales o biométricos. Solo desplaza el perfil actual y abre el cuadro nativo “Acerca de este miembro” después de que el usuario pulsa “Haz clic para verificar la autenticidad”.</p>
+    </main>
+  </body>
+</html>

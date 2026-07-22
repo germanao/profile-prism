@@ -1,0 +1,16 @@
+node_modules/
+dist/
+artifacts/
+.agents/
+.codex/
+coverage/
+playwright-report/
+test-results/
+.env
+.env.*
+*.pem
+*.key
+*.log
+*.zip
+.DS_Store
+Thumbs.db
